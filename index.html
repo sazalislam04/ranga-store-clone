@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ranga Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/17f1d2113e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        .card-hover:hover{
+            transition: all 0.4s ease;
+            border: 1px solid blue;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+        }
+    </style>
+  </head>
+  <body style="background-color: #eee;">
+    <header>
+      <nav class="navbar bg-light py-4 bg-dark navbar-dark">
+        <div class="container">
+          <a href="#" class="navbar-brand fs-2"><i class="fa-solid fa-house text-primary pointer"></i> FakeStore</a>
+            <div class="input-group w-75 mx-auto">
+                <input id="search-input" type="text" class="form-control" placeholder="Search in Product">
+                <button id="search-btn" class="btn btn-outline-primary" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div>
+                <button id="cart-btn" onclick="productCart()"  class="btn btn-primary position-relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="counter">0</span>
+                </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="position-relative">
+      <section class="top-0 end-0 position-absolute">
+        <div class="card border-info mb-3" style="width: 20rem;">
+          <div class="card-header fs-3 bg-success text-center text-light">Shopping Cart
+              <i class="fa-solid fa-cart-arrow-down"></i>
+          </div>
+          <div class="card-body px-4">
+           <h5 class="border-top border-bottom py-2 d-flex justify-content-between">Total Added-Products:
+            <span><span id="total-product">0</span></span>
+           </h5>
+           <h5 class="border-top border-bottom py-2 d-flex justify-content-between">Price:
+            <span>$ <span id="price">0</span></span>
+           </h5>
+           <h5 class="border-top border-bottom py-2 d-flex justify-content-between">Delivery-Charge:
+            <span>$ <span id="delivery-charge">0</span></span>
+           </h5>
+           <h5 class="border-top border-bottom py-2 d-flex justify-content-between">Total-Tax:
+            <span>$ <span id="total-tax">0</span></span>
+           </h5>
+           <h5 class="border-top text-danger border-bottom py-2 d-flex justify-content-between">Total:
+            <span>$ <span id="grand-total">0</span></span>
+           </h5>
+          </div>
+        </div>
+      </section>
+        <section class="container py-5 position-absolute w-75">
+            <div id="products-container" class="row row-cols-1 row-cols-md-3 g-4">
+                <!--  -->
+              </div>
+        </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script -->
+    <script src="./js/cart.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
