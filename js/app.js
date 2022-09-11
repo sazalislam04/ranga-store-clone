@@ -1,6 +1,3 @@
-// const productCart = () => {
-//   window.location.href = `http://127.0.0.1:5501/cart.html#`;
-// };
 const getElement = (id) => {
   const element = document.getElementById(id);
   return element;
